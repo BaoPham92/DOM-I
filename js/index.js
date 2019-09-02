@@ -49,3 +49,12 @@ let navLinks = Array.from(nav.children);
 for (let i = 0; i <= navLinks.length -1; i++) {
   navLinks[i].textContent = Object.values(siteContent.nav)[i]
 }
+
+// HEADER ONE
+let header = document.querySelector('h1');
+
+// Change the data to desired outcome
+siteContent.cta.h1 = "DOM <br> Is <br> Awesome";
+
+// Apply data
+header.innerHTML = siteContent.cta.h1;
