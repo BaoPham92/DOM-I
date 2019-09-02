@@ -136,3 +136,7 @@ pendItem(contact.children[0], "append", siteContent["contact"]["contact-h4"]);
 pendItem(contact.children[1], "append", siteContent["contact"]["address"]);
 pendItem(contact.children[2], "append", siteContent["contact"]["phone"]);
 pendItem(contact.children[3], "append", siteContent["contact"]["email"]);
+
+// FOOTER
+const footer = document.querySelector('footer');
+pendItem(footer.firstElementChild, "append", siteContent["footer"]["copyright"]);
