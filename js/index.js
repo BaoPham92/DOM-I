@@ -50,6 +50,9 @@ for (let i = 0; i <= navLinks.length -1; i++) {
   navLinks[i].textContent = Object.values(siteContent.nav)[i]
 }
 
+
+// SECTION CLASS "cta"
+
 // HEADER ONE
 let header = document.querySelector('h1');
 
@@ -58,3 +61,7 @@ siteContent.cta.h1 = "DOM <br> Is <br> Awesome";
 
 // Apply data
 header.innerHTML = siteContent.cta.h1;
+
+// IMG TAG
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.setAttribute('src', siteContent.cta["img-src"]);
