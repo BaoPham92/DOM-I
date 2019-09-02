@@ -79,6 +79,11 @@ for (let i = 0; i <= navLinks.length -1; i++) {
   navLinks[i].style = "color: green;"
 }
 
+// New items for pre / append
+let newA = document.createElement('a');
+
+nav.append(newA.innerText = 'APPENDED');
+nav.prepend(newA.innerText = 'PREPENDED');
 
 // SECTION CLASS "cta"
 
@@ -108,12 +113,12 @@ const mainImg = document.querySelector('#middle-img');
 // Top Content
 
 // Headers inside Top Content
-pendItem(textContent[0].firstElementChild, "append", siteContent["main-content"]["features-h4"]);
-pendItem(textContent[1].firstElementChild, "append", siteContent["main-content"]["about-h4"]);
+textContent[0].firstElementChild.append(siteContent["main-content"]["features-h4"]);
+textContent[1].firstElementChild.append(siteContent["main-content"]["about-h4"]);
 
 // Paragraphs inside Top Content
-pendItem(textContent[0].lastElementChild, "append", siteContent["main-content"]["features-content"]);
-pendItem(textContent[1].lastElementChild, "append", siteContent["main-content"]["about-content"]);
+textContent[0].lastElementChild.append(siteContent["main-content"]["features-content"]);
+textContent[1].lastElementChild.append(siteContent["main-content"]["about-content"]);
 
 // Image
 mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
@@ -121,26 +126,26 @@ mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 // Bottom Content
 
 // Headers inside Top Content
-pendItem(textContent[2].firstElementChild, "append", siteContent["main-content"]["services-h4"]);
-pendItem(textContent[3].firstElementChild, "append", siteContent["main-content"]["product-h4"]);
-pendItem(textContent[4].firstElementChild, "append", siteContent["main-content"]["vision-h4"]);
+textContent[2].firstElementChild.append(siteContent["main-content"]["services-h4"]);
+textContent[3].firstElementChild.append(siteContent["main-content"]["product-h4"]);
+textContent[4].firstElementChild.append(siteContent["main-content"]["vision-h4"]);
 
 // Paragraphs inside Top Content
-pendItem(textContent[2].lastElementChild, "append", siteContent["main-content"]["services-content"]);
-pendItem(textContent[3].lastElementChild, "append", siteContent["main-content"]["product-content"]);
-pendItem(textContent[4].lastElementChild, "append", siteContent["main-content"]["vision-content"]);
+textContent[2].lastElementChild.append(siteContent["main-content"]["services-content"])
+textContent[3].lastElementChild.append(siteContent["main-content"]["services-content"])
+textContent[4].lastElementChild.append(siteContent["main-content"]["services-content"])
 
 // CONTACT
 const contact = document.querySelector('.contact');
 
 // Header
-pendItem(contact.children[0], "append", siteContent["contact"]["contact-h4"]);
+contact.children[0].append(siteContent["contact"]["contact-h4"]);
 
 // Paragraphs
-pendItem(contact.children[1], "append", siteContent["contact"]["address"]);
-pendItem(contact.children[2], "append", siteContent["contact"]["phone"]);
-pendItem(contact.children[3], "append", siteContent["contact"]["email"]);
+contact.children[1].append(siteContent["contact"]["address"]);
+contact.children[2].append(siteContent["contact"]["phone"]);
+contact.children[3].append(siteContent["contact"]["email"]);
 
 // FOOTER
 const footer = document.querySelector('footer');
-pendItem(footer.firstElementChild, "append", siteContent["footer"]["copyright"]);
+footer.firstElementChild.append(siteContent["footer"]["copyright"])
