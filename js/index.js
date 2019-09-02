@@ -72,7 +72,11 @@ let navLinks = Array.from(nav.children);
 
 // Grab values from SiteContent and apply to a tag's textContent
 for (let i = 0; i <= navLinks.length -1; i++) {
+  // Apply text content
   navLinks[i].textContent = Object.values(siteContent.nav)[i]
+
+  // Add inline color to a tag
+  navLinks[i].style = "color: green;"
 }
 
 
