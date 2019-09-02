@@ -65,3 +65,9 @@ header.innerHTML = siteContent.cta.h1;
 // IMG TAG
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
+
+// BUTTON
+const button = document.querySelector('button');
+
+// Setting text
+button.innerText = siteContent.cta.button
