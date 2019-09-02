@@ -37,6 +37,31 @@ const siteContent = {
   },
 };
 
+// FUNCTIONS
+
+const pendItem = (
+  target, 
+  method, 
+  value) => {
+
+    // Validation for type of method
+  switch(method) {
+    // .append()
+    case "append": 
+    target.append(value)
+    break;
+
+    // .prepend()
+    case "prepend":
+    target.prepend(value)
+    break;
+
+    // Default action
+    default:
+    break;
+  }
+}
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -71,3 +96,34 @@ const button = document.querySelector('button');
 
 // Setting text
 button.innerText = siteContent.cta.button
+
+// MAIN CONTENT
+const textContent = document.querySelectorAll('.text-content');
+const mainImg = document.querySelector('#middle-img');
+
+// Top Content
+
+// Headers inside Top Content
+pendItem(textContent[0].firstElementChild, "append", siteContent["main-content"]["features-h4"]);
+pendItem(textContent[1].firstElementChild, "append", siteContent["main-content"]["about-h4"]);
+
+// Paragraphs inside Top Content
+pendItem(textContent[0].lastElementChild, "append", siteContent["main-content"]["features-content"]);
+pendItem(textContent[1].lastElementChild, "append", siteContent["main-content"]["about-content"]);
+
+// Image
+mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Bottom Content
+
+// Headers inside Top Content
+pendItem(textContent[2].firstElementChild, "append", siteContent["main-content"]["services-h4"]);
+pendItem(textContent[3].firstElementChild, "append", siteContent["main-content"]["product-h4"]);
+pendItem(textContent[4].firstElementChild, "append", siteContent["main-content"]["vision-h4"]);
+
+// Paragraphs inside Top Content
+pendItem(textContent[2].lastElementChild, "append", siteContent["main-content"]["services-content"]);
+pendItem(textContent[3].lastElementChild, "append", siteContent["main-content"]["product-content"]);
+pendItem(textContent[4].lastElementChild, "append", siteContent["main-content"]["vision-content"]);
+
+console.log(textContent)
