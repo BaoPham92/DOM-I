@@ -126,4 +126,13 @@ pendItem(textContent[2].lastElementChild, "append", siteContent["main-content"][
 pendItem(textContent[3].lastElementChild, "append", siteContent["main-content"]["product-content"]);
 pendItem(textContent[4].lastElementChild, "append", siteContent["main-content"]["vision-content"]);
 
-console.log(textContent)
+// CONTACT
+const contact = document.querySelector('.contact');
+
+// Header
+pendItem(contact.children[0], "append", siteContent["contact"]["contact-h4"]);
+
+// Paragraphs
+pendItem(contact.children[1], "append", siteContent["contact"]["address"]);
+pendItem(contact.children[2], "append", siteContent["contact"]["phone"]);
+pendItem(contact.children[3], "append", siteContent["contact"]["email"]);
